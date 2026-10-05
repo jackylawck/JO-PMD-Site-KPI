@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-HK" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+  
+  <!-- 🔍 Google Search Console 擁有權驗證 -->
+  <meta name="google-site-verification" content="JZ5UohX-CcP_fQV0_DI9VadkKY4ZoTTkUifL88-fIcY">
+
+  <!-- 🏢 基礎 SEO 核心標籤：東淦工程創科項目 -->
+  <title>東淦 PMD 地盤同事 KPI 考核系統 | 東淦工程有限公司 (Jumbo Orient Contracting Limited)</title>
+  <meta name="description" content="東淦 PMD 地盤同事 KPI 考核系統 (jo-pmd-site-kpi) 是東淦工程有限公司（Jumbo Orient Contracting Limited）自主研發之數位化地盤績效管理平台。融合 ISO 9001:2015 條款 7.5 可追溯性核實與 ISO/IEC 42001 算法透明度，具備即時動態算分、零資料保留 (Zero-Data-Retention) 與標準化 PDF 自動存證機制。">
+  <meta name="keywords" content="東淦工程, 東淦工程有限公司, Jumbo Orient, Jumbo Orient Contracting Limited, jo-pmd-site-kpi, 高級管工, PMD, 項目管理部, KPI 考核, ISO 9001, ISO 42001, 建造業數位轉型, HR-Tech, Zero-Data-Retention, ReportLab, Streamlit, 企業管治">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jackylawck.github.io/jo-pmd-site-kpi/">
+
+  <!-- 👤 作者資訊 -->
+  <meta name="author" content="羅子淇 (Jacky Law)">
+  <meta property="article:author" content="羅子淇 (Jacky Law)">
+
+  <!-- 🌐 Open Graph / 社交分享卡片 -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jackylawck.github.io/jo-pmd-site-kpi/">
+  <meta property="og:title" content="東淦 PMD 地盤同事 KPI 考核系統 (jo-pmd-site-kpi) | 東淦工程創科項目">
+  <meta property="og:description" content="行動優先、全鏈路可追溯。東淦工程結合 ISO 9001 條款 7.5 審計追蹤與 ISO 42001 確定性演算法，打造工程地盤現場量化績效評核新標竿。">
+  <meta property="og:image" content="https://www.jumboorient.com.hk/assets/jumbo-orient-og-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="東淦工程 PMD 地盤同事 KPI 考核系統架構圖">
+  <meta property="og:locale" content="zh_HK">
+  <meta property="og:site_name" content="東淦工程有限公司 Jumbo Orient Contracting Limited">
+
+  <!-- 🐦 Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="jo-pmd-site-kpi: 東淦 PMD 地盤同事 KPI 考核系統 | 東淦工程">
+  <meta name="twitter:description" content="全鏈路數據追溯、行動端實時動態算分與 ISO 合規 PDF 自動存證，落實高標準工程合規與企業管治。">
+  <meta name="twitter:image" content="https://www.jumboorient.com.hk/assets/jumbo-orient-og-banner.png">
+
+  <!-- 📱 行動端適配與主題 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="東淦KPI系統">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#070f1e">
+  <meta name="application-name" content="jo-pmd-site-kpi 東淦地盤考核系統">
+
+  <!-- 🛡️ 企業級資安防禦策略 (CSP) 與權限控制 -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data: https://img.shields.io https://www.jumboorient.com.hk;
+    font-src 'self' data:;
+    connect-src 'self';
+    media-src 'none';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'none';
+    frame-ancestors 'none';
+  ">
+  <meta http-equiv="Permissions-Policy" content="accelerometer=(), gyroscope=(), microphone=(), camera=(), geolocation=(), payment=()">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- 🏷️ Schema.org 結構化資料 (企業法人 + 作者 Person + 應用程式) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Corporation",
+        "@id": "https://www.jumboorient.com.hk/#organization",
+        "name": "東淦工程有限公司",
+        "alternateName": "Jumbo Orient Contracting Limited",
+        "url": "https://www.jumboorient.com.hk/",
+        "logo": "https://www.jumboorient.com.hk/assets/logo.png",
+        "description": "東淦工程有限公司專注於高標準工程營造與營建工程服務，致力於推動智慧建造技術、數位轉型與企業高標準誠信管治。",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hong Kong",
+          "addressCountry": "HK"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://github.com/jackylawck/#author",
+        "name": "羅子淇 (Jacky Law)",
+        "jobTitle": "Senior HR Manager & Corporate Governance Advisor",
+        "worksFor": {
+          "@id": "https://www.jumboorient.com.hk/#organization"
+        },
+        "url": "https://github.com/jackylawck"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://jackylawck.github.io/jo-pmd-site-kpi/#software",
+        "name": "東淦 PMD 地盤同事 KPI 考核系統",
+        "alternateName": "Jumbo Orient Site Staff KPI Assessment System (jo-pmd-site-kpi)",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser, iOS, Android",
+        "author": {
+          "@id": "https://github.com/jackylawck/#author"
+        },
+        "publisher": {
+          "@id": "https://www.jumboorient.com.hk/#organization"
+        },
+        "description": "專為東淦工程項目管理部打造之數位化地盤績效評核系統，結合 ISO 9001 條款 7.5 可追溯性、ISO 42001 算法透明度與零資料保留 (Zero-Data-Retention) 架構。"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0078d4;
+      --primary-dark: #004578;
+      --bg-dark: #070f1e;
+      --card-bg: rgba(16, 29, 51, 0.75);
+      --card-border: rgba(0, 120, 212, 0.28);
+      --accent: #107c41;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang HK", "Microsoft JhengHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(0, 120, 212, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(16, 124, 65, 0.12) 0px, transparent 50%);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 24px 16px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 16px 28px;
+    }
+
+    .corp-badge {
+      display: inline-block;
+      background: rgba(0, 120, 212, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .badge-bar img {
+      height: 22px;
+    }
+
+    .tagline-box {
+      background: var(--card-bg);
+      border-left: 4px solid var(--primary);
+      border-radius: 4px;
+      padding: 16px 20px;
+      max-width: 840px;
+      margin: 0 auto 36px;
+      text-align: left;
+      font-size: 0.98rem;
+    }
+
+    .tagline-box strong {
+      color: #93c5fd;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 28px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .card h2 {
+      font-size: 1.35rem;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      color: #d1d5db;
+      font-size: 0.96rem;
+      margin-bottom: 14px;
+    }
+
+    /* 流程網格樣式 */
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .flow-node {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .flow-node.active {
+      border-color: rgba(0, 120, 212, 0.6);
+      background: rgba(0, 120, 212, 0.08);
+    }
+
+    .flow-step {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #60a5fa;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .flow-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .flow-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+
+    /* 業務對照表格樣式 */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    th {
+      background: rgba(0, 120, 212, 0.2);
+      color: #93c5fd;
+      padding: 12px 14px;
+      font-weight: 600;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #d1d5db;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .role-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* 技術亮點網格 */
+    .tech-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .tech-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .tech-item h3 {
+      font-size: 0.95rem;
+      color: #60a5fa;
+      margin-bottom: 8px;
+    }
+
+    .tech-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    .btn-launch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s ease;
+      margin-top: 12px;
+    }
+
+    .btn-launch:hover {
+      background: var(--primary-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 16px 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 1.6rem; }
+      .card { padding: 18px; }
+      body { padding: 16px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="corp-badge">東淦工程有限公司・創科項目</div>
+      <h1>東淦 PMD 地盤同事 KPI 考核系統</h1>
+      <div class="subtitle">Jumbo Orient Site Staff KPI Assessment System (jo-pmd-site-kpi)</div>
+      
+      <div class="badge-bar">
+        <a href="https://github.com/jackylawck/jo-pmd-site-kpi" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/badge/System-jo--pmd--site--kpi-0078D4.svg" alt="System jo-pmd-site-kpi">
+        </a>
+        <a href="https://www.jumboorient.com.hk" target="_blank" rel="noopener">
+          <img src="https://img.shields.io/badge/Organization-Jumbo%20Orient-blue.svg" alt="Jumbo Orient Contracting Limited">
+        </a>
+        <img src="https://img.shields.io/badge/Compliance-ISO%209001%20%7C%20ISO%2042001-green.svg" alt="ISO 9001 & ISO 42001 Compliant">
+        <img src="https://img.shields.io/badge/Privacy-PDPO%20%7C%20Zero--Retention-purple.svg" alt="Zero Data Retention">
+        <img src="https://img.shields.io/badge/Stack-Streamlit%20%7C%20ReportLab-orange.svg" alt="Tech Stack">
+      </div>
+
+      <div class="tagline-box">
+        <strong>"Mobile-First, Evidence-Based KPI Assessment & Zero-Data-Retention Engine"</strong><br>
+        「行動優先、實據追溯之數位化地盤 KPI 評核與零資料保留治理引擎」
+      </div>
+
+      <div>
+        <a href="https://jo-pmd-site-kpi.streamlit.app" target="_blank" rel="noopener" class="btn-launch">
+          🚀 開啟應用程式 / Launch Web App
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- 專案摘要 -->
+      <section class="card">
+        <h2>📌 專案摘要 (Executive Summary)</h2>
+        <p><strong>東淦 PMD 地盤同事 KPI 考核系統 (jo-pmd-site-kpi)</strong> 是東淦工程有限公司專為地盤項目管理部（PMD）及工程現場主管自主設計的數位化績效評核平台。</p>
+        <p>本系統將企業傳統紙本《高級管工關鍵績效指標 (KPI) 考核協議書》全面系統化，以 <strong>Streamlit 自適應 Web 引擎與純 Python ReportLab 報表核心</strong> 為基座。系統落實<strong>無資料庫零資料留存 (Zero-Data-Retention) 架構</strong>，在兼顧極致隱私保護與香港《個人資料（私隱）條例》(PDPO) 的前提下，實現「地盤數據實時動態算分 ➔ ISO 7.5 單據追溯 ➔ 一票否決合規審核 ➔ 四方審核簽署 A4 報告匯出」的無紙化治理閉環。</p>
+      </section>
+
+      <!-- 治理閉環架構 -->
+      <section class="card">
+        <h2>🏛️ 流程生命週期與治理閉環 (Governance Lifecycle)</h2>
+        <p>針對傳統地盤考核「紙本難攜、人工手算易錯、扣分口說無憑、審計鏈斷裂」的痛點，本系統建立完整的四階數位化治理流程：</p>
+        
+        <div class="flow-grid">
+          <div class="flow-node">
+            <div class="flow-step">階段一・現場量測</div>
+            <div class="flow-title">行動端即時動態算分</div>
+            <div class="flow-desc">主管單手操作輸入原始次數與成本，系統以毫秒級即時運算 11 項 KPI 得分與百分比。</div>
+          </div>
+          <div class="flow-node">
+            <div class="flow-step">階段二・憑證追溯</div>
+            <div class="flow-title">ISO 7.5 證據鏈綁定</div>
+            <div class="flow-desc">每筆評分強制或選填對應之地盤日誌、驗收批次單號或安全巡查檔號，確保可核實性。</div>
+          </div>
+          <div class="flow-node">
+            <div class="flow-step">階段三・合規審核</div>
+            <div class="flow-title">一票否決與 PIP 連動</div>
+            <div class="flow-desc">客觀檢核嚴重失聯或人為重大事故，自動判定 F 級並直接連動 ISO 糾正措施（CAPA）流程。</div>
+          </div>
+          <div class="flow-node active">
+            <div class="flow-step">階段四・存證歸檔</div>
+            <div class="flow-title">ReportLab 四方簽署 PDF</div>
+            <div class="flow-desc">自動產出標準化檔名（<code>[員工編號]_[姓名]_[日期].pdf</code>）之官方存證報告，完成歸檔閉環。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 考核四維度矩陣 -->
+      <section class="card">
+        <h2>📋 考核四大維度對照表 (KPI Dimension Matrix)</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>考核維度</th>
+                <th>權重</th>
+                <th>核心評核指標 (KPIs)</th>
+                <th>ISO 7.5 核實憑據與控制重點</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>一、溝通及匯報</strong></td>
+                <td><span class="role-badge">20%</span></td>
+                <td>1.1 緊急通訊準時回覆率<br>1.2 開工/異常/收工匯報完整率<br>1.3 工作行程及場地交接紀錄</td>
+                <td>通訊記錄、每日匯報時間戳記、跨場地交接登記表。嚴格排除非工作時間與外在不可控聯絡。</td>
+              </tr>
+              <tr>
+                <td><strong>二、工程進度及技術執行</strong></td>
+                <td><span class="role-badge">35%</span></td>
+                <td>2.1 調整後里程碑按時完成率<br>2.2 首次驗收通過率<br>2.3 圖紙版本/RFI/技術交底</td>
+                <td>總進度表 (Master Programme)、驗收批次紀錄單、RFI 正式澄清文件及工前交底簽署表。</td>
+              </tr>
+              <tr>
+                <td><strong>三、物料及成本控制</strong></td>
+                <td><span class="role-badge">15%</span></td>
+                <td>3.1 物料申請及收貨核對準確率<br>3.2 可避免物料損耗率</td>
+                <td>採購收貨對單表、報廢審定單。排除設計更改、業主指示及非施工組造成之正常損耗。</td>
+              </tr>
+              <tr>
+                <td><strong>四、安全及團隊管理</strong></td>
+                <td><span class="role-badge">30%</span></td>
+                <td>4.1 安全巡查及整改完成率<br>4.2 風險評估/工具箱會議/呈報<br>4.3 出勤核實及人手調配</td>
+                <td>安全巡查整改通知書、動態風險評估紀錄、熱工許可單及每日分判工人出勤核實表記錄。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 技術亮點 -->
+      <section class="card">
+        <h2>⚙️ 技術亮點 (Technical Implementation)</h2>
+        <div class="tech-list">
+          <div class="tech-item">
+            <h3>1. 零資料保留架構 (Zero-Data-Retention)</h3>
+            <p>全系統採無狀態記憶體計算，不設後端永久資料庫，用畢即棄，杜絕敏感員工考核個資外洩風險。</p>
+          </div>
+          <div class="tech-item">
+            <h3>2. 確定性透明算法 (ISO 42001)</h3>
+            <p>全面開源 11 項 KPI 數學公式與閥值條件，無黑箱 AI 自動判定，符合高標準演算法可解釋性與稽核要求。</p>
+          </div>
+          <div class="tech-item">
+            <h3>3. 純 Python PDF 引擎 (ReportLab)</h3>
+            <p>捨棄依賴 C 語言底層庫之方案，以純 Python 生成矢量 A4 報表，具備 100% 雲端部署穩定性與跨平台相容度。</p>
+          </div>
+          <div class="tech-item">
+            <h3>4. 行動端觸控極致優化 (Mobile-First)</h3>
+            <p>專為現場大拇指觸控與工地手套操作量身訂製的大尺寸數字增減鍵，免去實體表單攜帶與翻閱負擔。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <a href="https://www.jumboorient.com.hk" target="_blank" rel="noopener">公司官方網站</a> | 
+      </p>
+    </footer>
+  </div>
+
+</body>
+</html>
